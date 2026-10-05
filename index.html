@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="description" content="SystemFixAI finds the slow, manual work in your operations and replaces it with automation that runs." />
+    <title>SystemFixAI — Fix the work behind the work</title>
+    <link rel="icon" href="/assets/systemfixai-logo.png" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <div id="app"><main style="max-width:720px;margin:18vh auto;padding:24px;font:16px/1.6 system-ui;color:#4b5563"><strong style="color:#0a0c10">Starting SystemFixAI preview…</strong></main></div>
+    <script>
+      window.addEventListener('error', function (event) {
+        var root = document.getElementById('app');
+        if (root && !root.dataset.ready) root.innerHTML = '<main style="max-width:720px;margin:18vh auto;padding:24px;font:16px/1.6 system-ui;color:#4b5563"><strong style="color:#0a0c10">The preview failed to start.</strong><p>Reload the page. If it stays blank, open the browser console and share the first error.</p></main>';
+      }, true);
+      window.addEventListener('DOMContentLoaded', function () {
+        var root = document.getElementById('app');
+        if (root && root.querySelector('header') && root.querySelector('main')) root.dataset.ready = 'true';
+      });
+    </script>
+    <script defer src="/app.js"></script>
+  </body>
+</html>
